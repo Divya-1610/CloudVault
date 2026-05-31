@@ -4,7 +4,7 @@ import useAuthStore from '../store/useAuthStore'
 import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router'
 
-const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/file-api/'
+const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/file-api'
 
 const IMAGE_TYPES = ['png', 'jpg', 'jpeg', 'webp']
 const DOCUMENT_TYPES = ['pdf', 'docx', 'txt', 'pages']
@@ -35,7 +35,7 @@ export function Dashboard() {
     if (!userId) return
 
     try {
-      const resobj = await axios.get(`${BASE_URL}list/${userId}`, {
+      const resobj = await axios.get(`${BASE_URL}/list/${userId}`, {
         withCredentials: true,
       })
 
@@ -149,7 +149,7 @@ export function Dashboard() {
       setMsg('')
       setErrmsg('')
 
-      const resobj = await axios.delete(`${BASE_URL}delete/${id}`, {
+      const resobj = await axios.delete(`${BASE_URL}/delete/${id}`, {
         data: { publicId: cloudinaryPublicId },
         withCredentials: true,
       })
