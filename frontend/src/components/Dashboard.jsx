@@ -4,7 +4,7 @@ import useAuthStore from '../store/useAuthStore'
 import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router'
 
-const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/user-api'
+const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/file-api/'
 
 const IMAGE_TYPES = ['png', 'jpg', 'jpeg', 'webp']
 const DOCUMENT_TYPES = ['pdf', 'docx', 'txt', 'pages']

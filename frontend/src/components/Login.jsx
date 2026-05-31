@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import useAuthStore from '../store/useAuthStore.js' 
 
 function Login() {
-  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/'
+  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/user-api/'
   const navigate = useNavigate()
   const loginUser = useAuthStore((state) => state.loginUser) 
   
