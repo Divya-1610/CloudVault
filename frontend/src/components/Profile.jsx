@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router'
 import useAuthStore from '../store/useAuthStore'
 
-const BASE_URL = 'http://localhost:7777/user-api'
+const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com'
 
 export function Profile() {
   const navigate = useNavigate()
