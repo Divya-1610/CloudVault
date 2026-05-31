@@ -19,7 +19,9 @@ const DBconn = async ()=>{
             console.log("db connected!!!")  
         } catch(err) { console.log("db error occured!!",err.message) }
         
-        try {app.listen(process.env.PORT,()=>console.log(`listening on port......${process.env.PORT}`)) }        
+        try {
+            const port = process.env.PORT || 7777
+            app.listen(process.env.PORT,()=>console.log(`listening on port......${port}`)) }        
         catch (err) { console.log("port error occured!!",err.message)}    
     }
 
