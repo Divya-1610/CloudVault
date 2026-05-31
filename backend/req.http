@@ -1,0 +1,54 @@
+GET http://localhost:7777/user-api/users
+###
+
+//add user
+POST http://localhost:7777/user-api/user
+Content-Type: application/json
+
+{
+    "firstName" : "divya",
+    "lastName":"srinivas",
+    "mobile" : 7989446919,
+    "email": "div123@gmail.com",
+    "password": "div123"
+}
+###
+
+//delete a user- hard delete
+DELETE http://localhost:7777/user-api/6a1935a3215c236840d3cc98
+###
+
+//update user
+PUT http://localhost:7777/user-api/update/6a1aeb4b635aaa2467458acb
+Content-Type: application/json
+
+{
+    "password" : "1234"
+}
+###
+
+//soft delete / restore
+PATCH http://localhost:7777/user-api/userdelres/6a19388e1ef37d752ebbdc82
+###
+
+///------file routes
+
+//get user files
+GET http://localhost:7777/file-api/my-files/6a1935a3215c236840d3cc98
+###
+
+//Upload a file to Cloudinary and link it to a user
+POST http://localhost:7777/file-api/upload
+Content-Type: multipart/form-data; boundary=MyCustomBoundary
+
+--MyCustomBoundary
+Content-Disposition: form-data; name="userId"
+
+6a1935a3215c236840d3cc98
+--MyCustomBoundary
+Content-Disposition: form-data; name="file"; filename="sample.pdf"
+Content-Type: application/pdf
+
+< ../../../Downloads/sample.pdf
+--MyCustomBoundary--
+###
