@@ -14,7 +14,7 @@
 - cors
 - jsonwebtoken
 
-## Structure
+## Backend Structure
 ```text
 Backend
     |_____APIs/
@@ -70,7 +70,7 @@ Env Variables:
 - react-router
 - zustand
 
-# Strucuture 
+# Frontend Strucuture 
 
 ```text
 frontend
