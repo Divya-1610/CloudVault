@@ -3,9 +3,9 @@ import axios from 'axios'
 import { useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form'
 import useAuthStore from '../store/useAuthStore.js' 
+import { API_URLS } from '../config/api.js'
 
 function Login() {
-  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/user-api'
   const navigate = useNavigate()
   const loginUser = useAuthStore((state) => state.loginUser) 
   
@@ -19,7 +19,7 @@ function Login() {
       seterrmsg('')
       setmsg('')
       
-      let resobj = await axios.post(`${BASE_URL}/login`, userobj, { withCredentials: true })
+      let resobj = await axios.post(API_URLS.LOGIN, userobj, { withCredentials: true })
       
       if (resobj.status === 200) {
         setmsg("Login successful!")

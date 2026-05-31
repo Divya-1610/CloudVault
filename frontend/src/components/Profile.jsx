@@ -2,8 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router'
 import useAuthStore from '../store/useAuthStore'
-
-const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com'
+import { API_URLS } from '../config/api.js'
 
 export function Profile() {
   const navigate = useNavigate()
@@ -52,7 +51,7 @@ export function Profile() {
       setMsg('')
       setErrmsg('')
 
-      const resobj = await axios.put(`${BASE_URL}/update/${userId}`, payload, {
+      const resobj = await axios.put(API_URLS.PROFILE_UPDATE(userId), payload, {
         withCredentials: true,
         headers: {
           'Content-Type': 'application/json',

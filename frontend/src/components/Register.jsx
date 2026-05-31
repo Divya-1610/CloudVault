@@ -3,9 +3,9 @@ import axios from 'axios'
 import homeimg from '../assets/homeimage1.png'
 import { useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form'
+import { API_URLS } from '../config/api.js'
 
 function Register() {
-  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/'
   const navigate = useNavigate()
   const [msg, setmsg] = useState('')
   const [errmsg, seterrmsg] = useState('')
@@ -17,7 +17,7 @@ function Register() {
       seterrmsg('')
       setmsg('')
       
-      let resobj = await axios.post(`${BASE_URL}user`, userobj)
+      let resobj = await axios.post(API_URLS.REGISTER, userobj)
       
       if (resobj.status === 200 || resobj.status === 201) {
         setmsg("User registered successfully!")

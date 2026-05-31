@@ -9,9 +9,26 @@ import { fileApp } from './APIs/fileAPi.js'
 
 config()
 const app = exp()
-const allowedOrigin = process.env.FRONTEND_URL || 'https://cloudvault-tsfx.onrender.com'
+const allowedOrigins = [
+    'https://cloudvault-tsfx.onrender.com',
+    'http://localhost:5173',
+    'http://localhost:3000'
+]
+if (process.env.FRONTEND_URL) {
+    allowedOrigins.push(process.env.FRONTEND_URL.replace(/\/$/, ''))
+}
+
 app.use(cors({
-    origin: allowedOrigin, 
+    origin: (origin, callback) => {
+        if (!origin) return callback(null, true);
+        const cleanOrigin = origin.replace(/\/$/, '');
+        if (allowedOrigins.includes(cleanOrigin) || 
+            (cleanOrigin.includes('cloudvault') && cleanOrigin.includes('onrender.com'))) {
+            return callback(null, true);
+        } else {
+            return callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
     optionsSuccessStatus: 200 
 }))
@@ -26,7 +43,7 @@ const DBconn = async ()=>{
         
         try {
             const port = process.env.PORT || 7777
-            app.listen(process.env.PORT,()=>console.log(`listening on port......${port}`)) }        
+            app.listen(port,()=>console.log(`listening on port......${port}`)) }        
         catch (err) { console.log("port error occured!!",err.message)}    
     }
 

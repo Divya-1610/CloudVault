@@ -3,8 +3,7 @@ import axios from 'axios'
 import useAuthStore from '../store/useAuthStore'
 import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router'
-
-const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/file-api'
+import { API_URLS } from '../config/api.js'
 
 const IMAGE_TYPES = ['png', 'jpg', 'jpeg', 'webp']
 const DOCUMENT_TYPES = ['pdf', 'docx', 'txt', 'pages']
@@ -35,7 +34,7 @@ export function Dashboard() {
     if (!userId) return
 
     try {
-      const resobj = await axios.get(`${BASE_URL}/list/${userId}`, {
+      const resobj = await axios.get(API_URLS.FILE_LIST(userId), {
         withCredentials: true,
       })
 
@@ -117,7 +116,7 @@ export function Dashboard() {
       setMsg('')
       setErrmsg('')
 
-      const resobj = await axios.post(`${BASE_URL}upload`, formData, {
+      const resobj = await axios.post(API_URLS.FILE_UPLOAD, formData, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' },
       })
@@ -149,7 +148,7 @@ export function Dashboard() {
       setMsg('')
       setErrmsg('')
 
-      const resobj = await axios.delete(`${BASE_URL}/delete/${id}`, {
+      const resobj = await axios.delete(API_URLS.FILE_DELETE(id), {
         data: { publicId: cloudinaryPublicId },
         withCredentials: true,
       })
