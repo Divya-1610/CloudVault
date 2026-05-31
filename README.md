@@ -36,14 +36,14 @@ Backend
 ```
 
 Env Variables:
-DB_URL= database url for mongodb atlas
-PORT = portno
-FRONTEND_URL = deployed frontend url
-JWT_SECRET= jwt secret key
-NODE_ENV =production/ deployment
-CLOUDINARY_CLOUD_NAME= cloudinary cloud name
-CLOUDINARY_API_KEY= cloudinary api key
-CLOUDINARY_API_SECRET= cloudinary api secret
+- DB_URL= database url for mongodb atlas
+- PORT = portno
+- FRONTEND_URL = deployed frontend url
+- JWT_SECRET= jwt secret key
+- NODE_ENV =production/ deployment
+- CLOUDINARY_CLOUD_NAME= cloudinary cloud name
+- CLOUDINARY_API_KEY= cloudinary api key
+- CLOUDINARY_API_SECRET= cloudinary api secret
 
 ## Description
 ### API
