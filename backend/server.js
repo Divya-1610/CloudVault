@@ -34,6 +34,6 @@ app.use(exp.urlencoded({ limit: '50mb', extended: true }));
 
 app.use(cookieParser()) // for cookies
 
+DBconn()
 app.use ('/user-api',userApp)
 app.use ('/file-api',fileApp)
-DBconn()
