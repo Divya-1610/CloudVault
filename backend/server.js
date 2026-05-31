@@ -9,7 +9,7 @@ import { fileApp } from './APIs/fileAPi.js'
 
 config()
 const app = exp()
-
+app.use(cors({origin:process.env.FRONTEND_URL , credentials:true}))
 
 // DB connection and port assigning
 const DBconn = async ()=>{
@@ -27,9 +27,6 @@ const DBconn = async ()=>{
     {console.log(err)}
 }
 
-DBconn()
-app.use(cors({origin:process.env.FRONTEND_URL , credentials:true}))
-
 //middlewares 
 
 app.use(exp.json({ limit: '50mb' }));
@@ -39,3 +36,4 @@ app.use(cookieParser()) // for cookies
 
 app.use ('/user-api',userApp)
 app.use ('/file-api',fileApp)
+DBconn()
