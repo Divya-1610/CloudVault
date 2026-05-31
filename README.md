@@ -15,6 +15,7 @@
 - jsonwebtoken
 
 ## Structure
+```text
 Backend
     |_____APIs/
     |        |__FileAPI
@@ -32,6 +33,7 @@ Backend
     |
     |_______ .env
     |_______server.js(main)
+```
 
 Env Variables:
 DB_URL= database url for mongodb atlas
@@ -70,6 +72,7 @@ CLOUDINARY_API_SECRET= cloudinary api secret
 
 # Strucuture 
 
+```text
 frontend
     |_________src/
     |          |
@@ -88,3 +91,4 @@ frontend
     |
     |______vite.config.js  // add tailwindcss to the configuration  
 
+```
