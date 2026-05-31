@@ -2,7 +2,9 @@
 - Deployment Link : https://cloudvault-tsfx.onrender.com
 #### Deployment description: 
 ```text
-used render to deploy both frontend and backend - frontend deployment using render static site and backend deployment using render web service
+used render to deploy both frontend and backend
+frontend deployment using render static site
+backend deployment using render web service
 ```
 - frontend link : https://cloudvault-tsfx.onrender.com
 - backend link : https://cloudvaultbackend-n1x9.onrender.com
