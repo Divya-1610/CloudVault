@@ -9,8 +9,9 @@ import { fileApp } from './APIs/fileAPi.js'
 
 config()
 const app = exp()
+const allowedOrigin = process.env.FRONTEND_URL || 'https://cloudvault-tsfx.onrender.com'
 app.use(cors({
-    origin: process.env.FRONTEND_URL, 
+    origin: allowedOrigin, 
     credentials: true,
     optionsSuccessStatus: 200 
 }))
