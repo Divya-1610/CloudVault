@@ -1,4 +1,11 @@
-# BACKEND
+## Deployment:
+- Deployment Link : https://cloudvault-tsfx.onrender.com
+#### Deployment description: 
+    used render to deploy both frontend and backend - frontend deployment using render static site and backend deployment using render web service
+- frontend link : https://cloudvault-tsfx.onrender.com
+- backend link : https://cloudvaultbackend-n1x9.onrender.com
+
+## BACKEND
 ### setup
 - npm init -y
 - npm i express
@@ -57,7 +64,7 @@ Env Variables:
 - user model : firstName,lastName , password, email , mobile
 - file model : file name ,file type, file url ,size, cloudinary id , user(ref)
 
-# Frontend
+## Frontend
 
 ### setup
 - npm create vite@latest
