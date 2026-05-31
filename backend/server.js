@@ -9,7 +9,11 @@ import { fileApp } from './APIs/fileAPi.js'
 
 config()
 const app = exp()
-app.use(cors({origin:process.env.FRONTEND_URL , credentials:true}))
+aapp.use(cors({
+    origin: process.env.FRONTEND_URL, 
+    credentials: true,
+    optionsSuccessStatus: 200 
+}))
 
 // DB connection and port assigning
 const DBconn = async ()=>{
@@ -36,6 +40,6 @@ app.use(exp.urlencoded({ limit: '50mb', extended: true }));
 
 app.use(cookieParser()) // for cookies
 
-DBconn()
 app.use ('/user-api',userApp)
 app.use ('/file-api',fileApp)
+DBconn()
