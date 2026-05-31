@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form'
 
 function Register() {
-  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com'
+  const BASE_URL = 'https://cloudvaultbackend-n1x9.onrender.com/'
   const navigate = useNavigate()
   const [msg, setmsg] = useState('')
   const [errmsg, seterrmsg] = useState('')
