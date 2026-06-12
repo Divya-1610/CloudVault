@@ -198,7 +198,7 @@ export function Dashboard() {
 
               <div className="leading-tight">
                 <h1 className="font-black text-xl tracking-tight text-gray-900 uppercase">
-                  Digi<span className="text-blue-600">Vault</span>
+                  Cloud<span className="text-blue-600">Vault</span>
                 </h1>
                 <p className="hidden sm:block text-xs font-semibold text-gray-400 uppercase tracking-wider">
                   Secure File Storage
