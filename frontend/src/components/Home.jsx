@@ -10,7 +10,7 @@ function Home() {
       <div className='flex flex-col gap-6 w-full max-w-xl'>
         <div className='flex h-12 md:h-16 gap-5 items-center'>
           <img src={logo} alt="logo" className='h-full aspect-square rounded-full object-cover'/>
-          <h1 className='text-4xl md:text-6xl font-bold text-blue-700 whitespace-nowrap'><span className='text-black'>Digi</span>Vault</h1>
+          <h1 className='text-4xl md:text-6xl font-bold text-blue-700 whitespace-nowrap'><span className='text-black'>Cloud</span>Vault</h1>
         </div>
         
         <div className='w-full'>
