@@ -39,12 +39,10 @@ const DBconn = async ()=>{
         try{
             await connect(process.env.DB_URL)
             console.log("db connected!!!")  
-        } catch(err) { console.log("db error occured!!",err.message) }
-        
-        try {
+       
             const port = process.env.PORT || 7777
             app.listen(port,()=>console.log(`listening on port......${port}`)) }        
-        catch (err) { console.log("port error occured!!",err.message)}    
+        catch (err) { console.log(" error occured!!",err.message)}    
     }
 
     catch(err)
