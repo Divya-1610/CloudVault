@@ -12,7 +12,7 @@
 - zustand
 
 # Strucuture 
-'''text
+```text
 frontend
     |_________src/
     |          |
@@ -31,7 +31,7 @@ frontend
     |
     |______vite.config.js  // add tailwindcss to the configuration  
 
-'''
+```
 
 
 
