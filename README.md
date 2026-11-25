@@ -9,6 +9,14 @@ backend deployment using render web service
 - frontend link : https://cloudvault-tsfx.onrender.com
 - backend link : https://cloudvaultbackend-n1x9.onrender.com
 
+####screenshots
+<img width="754" height="471" alt="© CloudVault" src="https://github.com/user-attachments/assets/597dcf9f-c146-4a42-a1cb-c1ad4d20b107" />
+<img width="727" height="343" alt="unknown" src="https://github.com/user-attachments/assets/8ccbfbe9-086a-4a96-aad2-02656052bad4" />
+<img width="807" height="466" alt="unknown" src="https://github.com/user-attachments/assets/15cf1c76-5385-46c2-90fc-dac2acd9cf85" />
+<img width="807" height="501" alt="unknown" src="https://github.com/user-attachments/assets/4bc980f1-7401-405b-a365-18efcfa9c1eb" />
+<img width="807" height="523" alt="unknown" src="https://github.com/user-attachments/assets/9ebb09ac-6f4c-433a-992e-a8ce48556ee6" />
+
+
 ## BACKEND
 ### setup
 - npm init -y
